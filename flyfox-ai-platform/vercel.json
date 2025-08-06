@@ -1,0 +1,46 @@
+{
+  "name": "flyfox-ai-platform",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://app.flyfoxai.com" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization, X-Requested-With" },
+        { "key": "Access-Control-Allow-Credentials", "value": "true" }
+      ]
+    }
+  ],
+  "env": {
+    "VITE_SUPABASE_URL": "https://hysfiibfajydjatsqtbz.supabase.co",
+    "VITE_WEBSITE_URL": "https://flyfoxai.com",
+    "VITE_APP_URL": "https://app.flyfoxai.com",
+    "VITE_API_URL": "https://api.flyfoxai.com",
+    "VITE_VOICE_URL": "https://voice.flyfoxai.com"
+  },
+  "domains": [
+    "app.flyfoxai.com",
+    "api.flyfoxai.com",
+    "voice.flyfoxai.com"
+  ]
+}
