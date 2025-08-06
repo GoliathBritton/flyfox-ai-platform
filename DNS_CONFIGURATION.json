@@ -1,0 +1,47 @@
+{
+  "domain": "flyfoxai.com",
+  "records": [
+    {
+      "type": "A",
+      "name": "@",
+      "value": "76.76.19.19",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "value": "flyfoxai.com",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "app",
+      "value": "cname.vercel-dns.com",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "api",
+      "value": "cname.vercel-dns.com",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "voice",
+      "value": "cname.vercel-dns.com",
+      "ttl": 3600
+    },
+    {
+      "type": "TXT",
+      "name": "@",
+      "value": "v=spf1 include:_spf.google.com ~all",
+      "ttl": 3600
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "value": "1 aspmx.l.google.com",
+      "ttl": 3600
+    }
+  ]
+}
