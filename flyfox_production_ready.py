@@ -30,7 +30,7 @@ class FlyfoxProductionPlatform:
         
         # Payment Processing (CONFIRMED WORKING)
         self.stripe_config = {
-            "secret_key": "sk_test_51RtERqPrxTsW5OEfDfYwo6iYStgbyTBMYZuw95KMe0G7kDiX6ksYKzoOxyQoWMfJRhFnesXPGiR03wuqAF84nTX500dcNAhB2v",
+            "secret_key": "your_stripe_secret_key_here",
             "publishable_key": "pk_test_51RtERqPrxTsW5OEfjlJ4MEvtx6vVV2zRx4Eq52WnD5Lq8TnWSqEJFWydBllXHGEu5bFz3cBbTzp3BZE1Rg31BKk00zjaU6UoJ"
         }
         
