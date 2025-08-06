@@ -1,57 +1,35 @@
-# FLYFOX AI - VERCEL DEPLOYMENT GUIDE
-## **Domain: flyfoxai.com**
+# 🚀 FLYFOX AI - Vercel Deployment Guide
 
-### **Prerequisites**
-- ✅ Domain: flyfoxai.com (already owned)
-- ✅ DNS: Configured with existing records
-- ✅ Supabase: Database ready
-- ✅ AWS: Lambda functions ready
+## **Framework Preset Configuration**
 
-### **Step 1: Install Vercel CLI**
-```bash
-# Install Vercel CLI globally
-npm install -g vercel
+Your FLYFOX AI platform uses **Vite + React**, which requires the following Vercel configuration:
 
-# Login to Vercel
-vercel login
-```
+### **Framework Preset: `vite`**
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Install Command**: `npm install`
+- **Dev Command**: `npm run dev`
 
-### **Step 2: Deploy React App**
-```bash
-# Navigate to React app directory
-cd flyfox-ai-platform
+## **Prerequisites**
 
-# Install dependencies
-npm install
+1. **Vercel Account**: Sign up at [vercel.com](https://vercel.com)
+2. **GitHub Repository**: Your code should be in `GoliathBritton/flyfox-ai-platform`
+3. **Domain**: `flyfoxai.com` (already configured)
 
-# Build the app
-npm run build
+## **Deployment Steps**
 
-# Deploy to Vercel
-vercel --prod
-```
+### **Step 1: Connect to Vercel**
 
-### **Step 3: Configure Custom Domains**
-```bash
-# Add custom domains to Vercel
-vercel domains add app.flyfoxai.com
-vercel domains add api.flyfoxai.com
-vercel domains add voice.flyfoxai.com
-```
+1. Go to [vercel.com/dashboard](https://vercel.com/dashboard)
+2. Click "New Project"
+3. Import your GitHub repository: `GoliathBritton/flyfox-ai-platform`
+4. Vercel will automatically detect it's a **Vite** project
 
-### **Step 4: Update DNS Records**
-Update your DNS zone with these CNAME records:
+### **Step 2: Configure Environment Variables**
+
+In your Vercel project settings, add these environment variables:
 
 ```
-CNAME: app → cname.vercel-dns.com
-CNAME: api → cname.vercel-dns.com
-CNAME: voice → cname.vercel-dns.com
-```
-
-### **Step 5: Environment Variables**
-Set these environment variables in Vercel dashboard:
-
-```env
 VITE_SUPABASE_URL=https://hysfiibfajydjatsqtbz.supabase.co
 VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5c2ZpaWJmYWp5ZGphdHNxdGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ0NjQzNjMsImV4cCI6MjA3MDA0MDM2M30.7bwhYLgCkHSlQXc14NuCpOY6y4jd8MjMc8zOIqynGjE
 VITE_WEBSITE_URL=https://flyfoxai.com
@@ -60,68 +38,72 @@ VITE_API_URL=https://api.flyfoxai.com
 VITE_VOICE_URL=https://voice.flyfoxai.com
 VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key_here
 VITE_PAYPAL_CLIENT_ID=ARbHoAvcE25ruW5AoK414FTnkW_ufJWWiPwPgHyyU7ypOyDLIRKvNpoaEOGyV4j8U6Wxvtk-3OjA-LxK
-VITE_NUCO_API_KEY=ScSL33hX9EGPlUniqabdT6dYeHrc1gFl9xeWulSYleZhIGZdWFubb8Rd8LaC9GXxJweK61CpZlrKANq5HLr6Txry0KPOEd59csltQ0EIuLMmW2N1KkOV8szEX8mni1gnVEBbAdDZbnOruwlYr5eAEJpreOHNi22TTLBzmyE9OygCxcxxKDslbylXCCUaNgRT90pH8x64qwf2kPuNvNTUvPn2aHQ
-VITE_NUCO_PROJECT_ID=flyfox-ai-quantum-platform
 ```
 
-### **Step 6: Deploy Backend Functions**
-```bash
-# Create API functions directory
-mkdir -p flyfox-ai-platform/api
+### **Step 3: Configure Custom Domain**
 
-# Copy backend scripts to API functions
-cp flyfox_*.py flyfox-ai-platform/api/
-cp flyfox_complete_launch.py flyfox-ai-platform/api/
+1. In Vercel project settings, go to "Domains"
+2. Add your custom domain: `app.flyfoxai.com`
+3. Update your DNS records as per `FLYFOX_AI_DNS_CONFIGURATION_GUIDE.md`
 
-# Deploy API functions
-vercel --prod
+### **Step 4: Deploy**
+
+1. Vercel will automatically build and deploy your app
+2. The build process will:
+   - Install dependencies (`npm install`)
+   - Build the React app (`npm run build`)
+   - Output to `dist` directory
+   - Deploy to Vercel's CDN
+
+## **Build Configuration**
+
+Your `vercel.json` is already configured with:
+
+```json
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev"
+}
 ```
 
-### **Step 7: Test Deployment**
-```bash
-# Test main application
-curl https://app.flyfoxai.com
+## **Expected Deployment URL**
 
-# Test API endpoints
-curl https://api.flyfoxai.com/health
+- **Production**: `https://app.flyfoxai.com`
+- **Preview**: `https://flyfox-ai-platform-git-main-goliathbritton.vercel.app`
 
-# Test voice services
-curl https://voice.flyfoxai.com/status
-```
+## **Post-Deployment**
 
-### **Step 8: Monitor Deployment**
-- **Vercel Dashboard**: https://vercel.com/dashboard
-- **Supabase Dashboard**: https://supabase.com/dashboard
-- **AWS Lambda Console**: https://console.aws.amazon.com/lambda
+1. **Test the deployment**: Visit `https://app.flyfoxai.com`
+2. **Verify environment variables**: Check that Supabase and payment integrations work
+3. **Monitor performance**: Use Vercel Analytics to track performance
 
-### **Expected URLs After Deployment**
-- ✅ https://flyfoxai.com (landing page)
-- ✅ https://app.flyfoxai.com (React application)
-- ✅ https://api.flyfoxai.com (backend services)
-- ✅ https://voice.flyfoxai.com (voice services)
+## **Troubleshooting**
 
-### **SSL Certificates**
-- ✅ Automatic SSL for all subdomains
-- ✅ HTTPS redirect enabled
-- ✅ Security headers configured
+### **Build Failures**
+- Check that all dependencies are in `package.json`
+- Verify TypeScript compilation passes locally
+- Check Vercel build logs for specific errors
 
-### **Performance Optimization**
-- ✅ Global CDN (Vercel Edge Network)
-- ✅ Automatic caching
-- ✅ Image optimization
-- ✅ Code splitting
+### **Environment Variables**
+- Ensure all `VITE_*` variables are set in Vercel
+- Redeploy after adding new environment variables
 
-### **Cost Estimation**
-- **Vercel Free Tier**: 100GB bandwidth/month
-- **Supabase Free Tier**: 500MB database
-- **AWS Lambda Free Tier**: 1M requests/month
-- **Total Cost**: $0/month (free tier)
+### **Domain Issues**
+- Verify DNS records are updated correctly
+- Allow 24-48 hours for DNS propagation
 
-### **Success Metrics**
-- ✅ Page Load: < 2 seconds
-- ✅ API Response: < 100ms
-- ✅ Database Queries: < 50ms
-- ✅ Real-time Updates: < 10ms
+## **Next Steps**
 
-### **Ready for Launch**
-Your FLYFOX AI platform is now ready for deployment with flyfoxai.com!
+After successful Vercel deployment:
+
+1. **Test all features**: Voice calling, payment processing, customer management
+2. **Set up monitoring**: Vercel Analytics and error tracking
+3. **Configure backups**: Database backups and file storage
+4. **Launch marketing**: Begin your marketing campaigns
+
+---
+
+**Status**: ✅ Ready for Vercel deployment with Vite framework preset
