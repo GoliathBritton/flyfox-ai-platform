@@ -1,5 +1,0 @@
-[33md8bcf5c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Complete FLYFOX AI platform deployment package
-[33m8f0214a[m Add Vercel framework preset configuration and deployment checklist
-[33madfde8e[m Final security fix: Replace all API keys with placeholders
-[33mbf1e5ec[m Fix security: Replace API keys with placeholders for GitHub push
-[33md8ccfb7[m Add comprehensive GitHub actions check report for FLYFOX AI platform
