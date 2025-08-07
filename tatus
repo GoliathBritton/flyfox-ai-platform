@@ -1,0 +1,10 @@
+[33md8bcf5c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Complete FLYFOX AI platform deployment package
+[33m8f0214a[m Add Vercel framework preset configuration and deployment checklist
+[33madfde8e[m Final security fix: Replace all API keys with placeholders
+[33mbf1e5ec[m Fix security: Replace API keys with placeholders for GitHub push
+[33md8ccfb7[m Add comprehensive GitHub actions check report for FLYFOX AI platform
+[33m85ee871[m Add final GitHub status summary for FLYFOX AI platform
+[33m6237b53[m Add comprehensive README and GitHub setup guide for FLYFOX AI platform
+[33m22d6fec[m FLYFOX AI - Complete Platform Implementation with flyfoxai.com domain integration
+[33mbc71e8b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Realtime: fix interrupt logic (#1370)
+[33m88b8199[m Update all translated document pages (#1369)

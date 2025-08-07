@@ -90,7 +90,7 @@ class FlyfoxPaymentSystem:
         """Setup Stripe and PayPal configurations"""
         try:
             # Stripe configuration
-            stripe.api_key = os.getenv("STRIPE_SECRET_KEY", "your_stripe_secret_key_here")
+            stripe.api_key = os.getenv("STRIPE_SECRET_KEY", "sk_test_placeholder_key_here")
             
             # PayPal configuration
             paypalrestsdk.configure({

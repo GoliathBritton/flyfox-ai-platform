@@ -26,7 +26,7 @@
 - [ ] `VITE_APP_URL` = `https://app.flyfoxai.com`
 - [ ] `VITE_API_URL` = `https://api.flyfoxai.com`
 - [ ] `VITE_VOICE_URL` = `https://voice.flyfoxai.com`
-- [ ] `VITE_STRIPE_PUBLISHABLE_KEY` = `your_stripe_publishable_key_here`
+- [ ] `VITE_STRIPE_PUBLISHABLE_KEY` = `pk_test_placeholder_key_here`
 - [ ] `VITE_PAYPAL_CLIENT_ID` = `ARbHoAvcE25ruW5AoK414FTnkW_ufJWWiPwPgHyyU7ypOyDLIRKvNpoaEOGyV4j8U6Wxvtk-3OjA-LxK`
 
 ### **4. Domain Configuration**

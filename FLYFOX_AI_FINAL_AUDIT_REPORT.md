@@ -124,7 +124,7 @@
 ### **Working APIs**
 ```
 ✅ Supabase: https://hysfiibfajydjatsqtbz.supabase.co
-✅ Stripe: your_stripe_publishable_key_here
+✅ Stripe: pk_test_placeholder_key_here
 ✅ PayPal: ARbHoAvcE25ruW5AoK414FTnkW_ufJWWiPwPgHyyU7ypOyDLIRKvNpoaEOGyV4j8U6Wxvtk-3OjA-LxK
 ✅ Nuco.Cloud: ScSL33hX9EGPlUniqabdT6dYeHrc1gFl9xeWulSYleZhIGZdWFubb8Rd8LaC9GXxJweK61CpZlrKANq5HLr6Txry0KPOEd59csltQ0EIuLMmW2N1KkOV8szEX8mni1gnVEBbAdDZbnOruwlYr5eAEJpreOHNi22TTLBzmyE9OygCxcxxKDslbylXCCUaNgRT90pH8x64qwf2kPuNvNTUvPn2aHQ
 ```
