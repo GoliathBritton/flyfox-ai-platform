@@ -14,8 +14,8 @@ class FlyfoxKeyConfig:
     def __init__(self):
         # FLYFOX AI API Keys (provided by user)
         self.api_keys = {
-            "STRIPE_SECRET_KEY": "sk_test_placeholder_key_here",
-            "STRIPE_PUBLISHABLE_KEY": "pk_test_placeholder_key_here",
+            "STRIPE_SECRET_KEY": "your_stripe_secret_key_here",
+            "STRIPE_PUBLISHABLE_KEY": "your_stripe_publishable_key_here",
             "PAYPAL_CLIENT_ID": "ARbHoAvcE25ruW5AoK414FTnkW_ufJWWiPwPgHyyU7ypOyDLIRKvNpoaEOGyV4j8U6Wxvtk-3OjA-LxK",
             "PAYPAL_CLIENT_SECRET": "EAa2naOKedIts7h6Rfe7pgs8EIFYloGGueENYWEue6T-yu0RaOyPHKMOWGh-Klerng8DiLp_iX598Z8A",
             "EMAIL_PASSWORD": "your_gmail_app_password_here",

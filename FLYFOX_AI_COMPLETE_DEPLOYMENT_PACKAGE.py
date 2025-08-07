@@ -55,8 +55,8 @@ class FlyfoxAIDeploymentPackage:
         # API Configuration (using placeholders for security)
         self.api_config = {
             "stripe": {
-                "secret_key": "sk_test_placeholder_key_here",
-                "publishable_key": "pk_test_placeholder_key_here"
+                "secret_key": "your_stripe_secret_key_here",
+                "publishable_key": "your_stripe_publishable_key_here"
             },
             "paypal": {
                 "client_id": "ARbHoAvcE25ruW5AoK414FTnkW_ufJWWiPwPgHyyU7ypOyDLIRKvNpoaEOGyV4j8U6Wxvtk-3OjA-LxK",

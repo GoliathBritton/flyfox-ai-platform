@@ -30,8 +30,8 @@ class FlyfoxProductionPlatform:
         
         # Payment Processing (CONFIRMED WORKING)
         self.stripe_config = {
-            "secret_key": "sk_test_placeholder_key_here",
-            "publishable_key": "pk_test_placeholder_key_here"
+            "secret_key": "your_stripe_secret_key_here",
+            "publishable_key": "your_stripe_publishable_key_here"
         }
         
         self.paypal_config = {
