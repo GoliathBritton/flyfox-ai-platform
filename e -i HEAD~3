@@ -1,5 +1,0 @@
-[33m39811e8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Remove accidentally created files
-[33mca7c1cd[m Fix: Replace Stripe placeholder keys to resolve GitHub secret scanning issues
-[33m1c14d4a[m first commit
-[33md8bcf5c[m Complete FLYFOX AI platform deployment package
-[33m8f0214a[m Add Vercel framework preset configuration and deployment checklist
