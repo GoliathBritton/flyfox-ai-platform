@@ -24,18 +24,18 @@ FLYFOX AI is a comprehensive AI platform that combines cutting-edge artificial i
 ### Installation
 
 1. **Clone the repository**
-   ```bash
+```bash
    git clone https://github.com/GoliathBritton/flyfox-ai-platform.git
    cd flyfox-ai-platform
-   ```
+```
 
 2. **Install dependencies**
-   ```bash
+```bash
    npm install
-   ```
+```
 
 3. **Set up environment variables**
-   ```bash
+```bash
    cp .env.example .env
    # Edit .env with your API keys
    ```
@@ -253,3 +253,4 @@ This project is proprietary software owned by Goliath of All Trade Inc..
 
 *Version: 1.0.0*
 *Status: Production Ready - 95% Complete*
+# flyfox-ai-platform
